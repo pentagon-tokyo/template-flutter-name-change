@@ -1,7 +1,7 @@
 name: template_flutter_name_change
 description: A new flutter plugin project.
 version: 0.0.1
-homepage:
+homepage: https://pentagon.tokyo/
 
 environment:
   sdk: ">=2.16.1 <3.0.0"
