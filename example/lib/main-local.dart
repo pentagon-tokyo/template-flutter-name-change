@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'app.dart';
-import 'flavors.dart';
+import 'package:template_flutter_name_change_example/app.dart';
+import 'package:template_flutter_name_change_example/flavors.dart';
 
 void main() {
   F.appFlavor = Flavor.LOCAL;

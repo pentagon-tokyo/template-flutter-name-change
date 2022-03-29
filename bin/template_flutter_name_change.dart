@@ -1,0 +1,6 @@
+import 'package:template_flutter_name_change/template_flutter_name_change.dart';
+
+void main(List<String> args) async {
+  print('called main');
+  execute(args);
+}

@@ -1,8 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-
-import 'flavors.dart';
-import 'pages/my_home_page.dart';
+import 'package:template_flutter_name_change_example/flavors.dart';
+import 'package:template_flutter_name_change_example/pages/my_home_page.dart';
 
 class App extends StatelessWidget {
   @override
@@ -25,17 +24,17 @@ class App extends StatelessWidget {
   }) =>
       show
           ? Banner(
-        child: child,
-        location: BannerLocation.topStart,
-        message: F.name,
-        color: Colors.green.withOpacity(0.6),
-        textStyle: TextStyle(
-            fontWeight: FontWeight.w700,
-            fontSize: 12.0,
-            letterSpacing: 1.0),
-        textDirection: TextDirection.ltr,
-      )
+              child: child,
+              location: BannerLocation.topStart,
+              message: F.name,
+              color: Colors.green.withOpacity(0.6),
+              textStyle: TextStyle(
+                  fontWeight: FontWeight.w700,
+                  fontSize: 12.0,
+                  letterSpacing: 1.0),
+              textDirection: TextDirection.ltr,
+            )
           : Container(
-        child: child,
-      );
+              child: child,
+            );
 }
