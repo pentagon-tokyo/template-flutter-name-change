@@ -14,6 +14,10 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_flavor: ^3.0.1
 
+  # for model
+  freezed_annotation: ^0.14.2
+  json_serializable:
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -21,6 +25,7 @@ dev_dependencies:
     path: ../
   flutter_flavorizr: ^2.0.0
   flutter_lints: ^1.0.0
+  build_runner: ^2.0.5
 
 flutter:
   uses-material-design: true

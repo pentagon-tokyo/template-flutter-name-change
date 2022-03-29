@@ -49,7 +49,7 @@ Future<void> forFiles(
   String newProjectName,
 ) async {
   for (var item in entities) {
-    if (item is File) {
+    if (item is File && !item.path.endsWith('.DS_Store')) {
       final file = File(item.path);
       final code = file.readAsStringSync();
       final updateCode = codeReplace(
