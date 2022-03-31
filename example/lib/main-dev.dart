@@ -3,6 +3,6 @@ import 'package:template_flutter_name_change_example/app.dart';
 import 'package:template_flutter_name_change_example/flavors.dart';
 
 void main() {
-  F.appFlavor = Flavor.DEV;
+  F.appFlavor = Flavor.dev;
   runApp(App());
 }

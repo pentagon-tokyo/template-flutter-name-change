@@ -4,6 +4,8 @@ import 'package:template_flutter_name_change_example/flavors.dart';
 import 'package:template_flutter_name_change_example/pages/my_home_page.dart';
 
 class App extends StatelessWidget {
+  const App({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,7 +30,7 @@ class App extends StatelessWidget {
               location: BannerLocation.topStart,
               message: F.name,
               color: Colors.green.withOpacity(0.6),
-              textStyle: TextStyle(
+              textStyle: const TextStyle(
                   fontWeight: FontWeight.w700,
                   fontSize: 12.0,
                   letterSpacing: 1.0),
