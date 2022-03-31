@@ -11,7 +11,7 @@ void execute(List<String> args) async {
   final newProjectName = arg['name'][0] as String;
 
   Parser parser = Parser(file: 'pubspec.yaml');
-  final pubSpec = parser.parse();
+  final pubSpec = parser.parseYaml();
   final oldProjectName = pubSpec.name;
 
   await updatePubSpec(oldProjectName, newProjectName);

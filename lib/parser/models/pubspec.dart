@@ -1,4 +1,3 @@
-import 'package:checked_yaml/checked_yaml.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 import 'flavorizr.dart';
@@ -19,7 +18,4 @@ class Pubspec {
   });
 
   factory Pubspec.fromJson(Map json) => _$PubspecFromJson(json);
-
-  factory Pubspec.parse(String yaml) =>
-      checkedYamlDecode(yaml, (o) => Pubspec.fromJson(o ?? {}));
 }

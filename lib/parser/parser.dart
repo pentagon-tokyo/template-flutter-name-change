@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:checked_yaml/checked_yaml.dart';
+
 import 'models/pubspec.dart';
 
 class Parser {
@@ -7,12 +9,10 @@ class Parser {
 
   Parser({required this.file});
 
-  Pubspec parse() {
+  Pubspec parseYaml() {
     File pubspecFile = File(file);
     String yaml = pubspecFile.readAsStringSync();
-
-    final pubspec = Pubspec.parse(yaml);
-
+    final pubspec = checkedYamlDecode(yaml, (o) => Pubspec.fromJson(o ?? {}));
     return pubspec;
   }
 }
