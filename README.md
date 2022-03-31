@@ -1,15 +1,36 @@
-# template_flutter_name_change
+# template flutter name change
 
-A new flutter plugin project.
+Pentagonでのプロジェクトの命名を一括で変更するライブラリ。
 
-## Getting Started
+## Example code
+サンプルコードはこちら
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+[example](https://github.com/pentagon-tokyo/template-flutter-name-change/tree/main/example)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## インストール
 
+```
+dev_dependencies:
+  template_flutter_name_change:
+      git:
+        url: git@github.com:pentagon-tokyo/template-flutter-name-change.git
+        ref: main
+```
+
+## 使い方
+### プロジェクトの名前を変更する場合
+```
+fvm flutter pub run template-flutter-name-change -n 〇〇(newプロジェクト名)
+```
+
+### プロジェクト名&build idを変更する場合
+pubspec.yamlの`flavorizr`以下を編集後に`sh/flutter_name_change_and_build_id.sh`を実行
+
+``` sh/flutter_name_change_and_build_id.sh 
+fvm flutter pub get
+fvm flutter pub run template_flutter_name_change -n $1
+fvm flutter pub get
+fvm flutter pub get
+fvm flutter pub run flutter_flavorizr -p assets:download,assets:extract,android:buildGradle,android:androidManifest,ios:xcconfig,ios:buildTargets,ios:schema,assets:clean
+```
+`flutter pub get`が2回連続であるのは、1回だけだと途中でコケる場合があるため...
