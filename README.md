@@ -20,7 +20,7 @@ dev_dependencies:
 ## 使い方
 ### プロジェクトの名前を変更する場合
 ```
-fvm flutter pub run template-flutter-name-change -n 〇〇(newプロジェクト名)
+fvm flutter pub run template_flutter_name_change -n 〇〇(newプロジェクト名)
 ```
 
 ### プロジェクト名&build idを変更する場合
